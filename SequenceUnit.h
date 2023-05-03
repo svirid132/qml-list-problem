@@ -1,6 +1,7 @@
 #ifndef UNITSEQUENCE_H
 #define UNITSEQUENCE_H
 
+#include "Vector.h"
 #include <QObject>
 
 class SequenceUnit : public QObject {
@@ -9,12 +10,6 @@ class SequenceUnit : public QObject {
     Q_PROPERTY(QObject* unit READ unit WRITE setUnit NOTIFY unitChanged)
 
 public:
-    enum Type {
-        Vector,
-        Matrix
-    };
-    Q_ENUM(Type)
-
     QString type() {
         return m_type;
     }
