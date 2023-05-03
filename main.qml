@@ -45,7 +45,9 @@ Window {
             return newPoints
         }
 
+        //link model:
         property list<Unit> list
+
         VectorController {
             id: cntr
         }
